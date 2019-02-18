@@ -1,0 +1,27 @@
+1.
+for loop: 495880718.868 iterations
+while loop: 445167528.413 iterations
+do while loop: 446571647.137 iterations
+
+2.
+for loop: 2.015549 seconds, 1.999325 seconds, 2.034968 seconds | AVG = 2.016614 seconds
+while loop: 2.248393 seconds, 2.246720 seconds, 2.243923 seconds | AVG = 2.24634533333 seconds
+do while loop: 2.233131 seconds, 2.248339 seconds, 2.236377 seconds | AVG = 2.23928233333 seconds
+
+3.
+for loop: 4
+while loop: 2
+do while loop: 2
+
+4. I think the for loop runs faster than the while or do while loop because of the architectural components of the computer. Additionally, I think the complexity of the contents of the loop plays a part in determining how long a loop takes.
+
+# of Instructions
+for loop: 12
+while loop: 10
+do while loop: 9
+
+Examining the dependencies of loop program
+linux-vdso.so.1 (0x00007ffc84d4a000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f4f837d0000)
+	/lib64/ld-linux-x86-64.so.2 (0x00005611ba85a000)
+[2]  - Done                          gedit loop.disas

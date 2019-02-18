@@ -1,0 +1,54 @@
+Sat Oct 28 16:43:14 EDT 2017
+matthew
+rm -fv main *.o
+rm -fv *~ \#*\# *.swp
+rm -fv test
+cc -g -Wall -std=c99 test.c node.c -o test -lm -lcunit
+node.c: In function ‘printNode’:
+node.c:6:10: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 2 has type ‘Node ** {aka struct _Node **}’ [-Wformat=]
+   printf("&n == %x\n", &n);
+          ^
+node.c:8:10: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 2 has type ‘void **’ [-Wformat=]
+   printf("&(n->ptr) == %x && n->ptr == %x\n", &(n->ptr), n->ptr);
+          ^
+node.c:8:10: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 3 has type ‘void *’ [-Wformat=]
+/tmp/cc0WoYM3.o: In function `printNode':
+/home/matthew/github/bucs220/grading/F17-A5/F17-A5-markcaldropoli/node.c:4: multiple definition of `printNode'
+/tmp/ccBMVeNG.o:/home/matthew/github/bucs220/grading/F17-A5/F17-A5-markcaldropoli/test.c:73: first defined here
+collect2: error: ld returned 1 exit status
+Makefile:14: recipe for target 'test' failed
+make: *** [test] Error 1
+bash: ./test: No such file or directory
+Sat Oct 28 16:43:50 EDT 2017
+matthew
+rm -fv main *.o
+rm -fv *~ \#*\# *.swp
+removed 'test.c~'
+rm -fv test
+cc -g -Wall -std=c99 test.c node.c -o test -lm -lcunit
+node.c: In function ‘printNode’:
+node.c:6:10: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 2 has type ‘Node ** {aka struct _Node **}’ [-Wformat=]
+   printf("&n == %x\n", &n);
+          ^
+node.c:8:10: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 2 has type ‘void **’ [-Wformat=]
+   printf("&(n->ptr) == %x && n->ptr == %x\n", &(n->ptr), n->ptr);
+          ^
+node.c:8:10: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 3 has type ‘void *’ [-Wformat=]
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+Node [0x1183120] = {.val=739, .ptr=0x1183148, .var=739}
+Node [0x1183140] = {.val=79, .ptr=0x1183168, .var=79}
+Node [0x1183160] = {.val=235, .ptr=0x1183188, .var=235}
+Node [0x1183180] = {.val=602, .ptr=0x11831a8, .var=602}
+Node [0x11831a0] = {.val=72, .ptr=0x11831c8, .var=72}
+Node [0x11831c0] = {.val=228, .ptr=0x11831e8, .var=228}
+Node [0x11831e0] = {.val=152, .ptr=0x1183208, .var=152}
+Node [0x1183200] = {.val=652, .ptr=0x1183228, .var=652}
+Node [0x1183220] = {.val=730, .ptr=0x1183248, .var=730}
+Node [0x1183240] = {.val=230, .ptr=(nil), .var=230}
+
+Suite: Suite_A5
+  Test: Testing my_reverse function ... ...

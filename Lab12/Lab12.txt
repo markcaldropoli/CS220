@@ -1,0 +1,13 @@
+In thread -913337504
+In thread -913337504
+In main thread
+In thread -913337504
+Exiting main thread
+
+Yes if one thread modifies the variable it changes the variable in the other threads.
+
+Yes.
+
+The value printed is different each time.
+
+This time, the value (20000000) is consecutively the same at each run.

@@ -1,0 +1,11 @@
+Assembly should be faster than C. This is because in the translation into machine language, assembly uses an assembler whereas C uses a compiler.
+
+reverse_asm could be made faster by using xor register_name register_name instead of the mov instructions to zero the registers. XORing a register with itself is fast than a MOV.
+
+Without -O2 Flag:
+reverse_c = 35
+reverse_asm = 10
+
+With -O2 Flag:
+reverse_c = 17
+reverse_asm = 10 

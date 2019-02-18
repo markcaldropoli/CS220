@@ -1,0 +1,22 @@
+Fork
+
+1. The order of the print statements in the output is inconsistent because depending on the timing of when fork is called and how the scheduler handles it, it is possible for the child to print before the parent.
+
+2. "In child" is consistently being printed before "In parent" as opposed to previously when either one could be printed before the other.
+
+3. 31575 for both numbers (increases by 2 on consecutive runs 31577..31579)
+
+4. 31603 and 31407 (31407 remains the same on consecutive runs)
+
+5. The last value isn't 1 because there are two different processes running so each process reaches 1 but in the child it's increasing from 0 to 1 and in the parent it's decreasing from 2 to 1.
+
+Multifork
+
+1. 14 prints total, 2x Line 1, 4x Line 2, 4x Line 3, 4x Line 4. Line 1 is printed twice, one time for the parent of the first fork, and another time for the child of the first fork. Line 2 is printed four times because it is printed twice for the first fork (one for child and one for parent) and twice for the second fork (one for child and one for parent). Line 3 and Line 4 are both printed four times because there are two childs and two parents where they each equal 0 to begin (printing Line 3) and after their values get updated, they are not equal to 0 (printing Line 4).
+
+2. The value of parent pid is sometimes 1 if the child gets delayed for a long enough time resulting in an orphan process.
+
+Exec
+
+Child pid = 32163, parent pid = 32162
+My pid is 32163, parent pid is 32162.

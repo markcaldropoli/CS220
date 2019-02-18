@@ -1,0 +1,6 @@
+STEP_SIZE = 4:		HDD ACCESS:  5 sec, 751460 micro sec
+STEP_SIZE = 32:		HDD ACCESS:  0 sec, 578212 micro sec
+STEP_SIZE = 128:	HDD ACCESS:  0 sec, 141513 micro sec
+STEP_SIZE = 1024:	HDD ACCESS:  0 sec, 026152 micro sec
+
+perf has is a set of commands that are used to collect and analyze performance and trace data. perf on the command line is similar to git in that there is a generic command, perf, which has a set of commands such as stat, record or report.

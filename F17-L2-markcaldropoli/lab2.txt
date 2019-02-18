@@ -1,0 +1,37 @@
+Memory
+Secret 1: 0xdeadbeef
+Secret 2: 0xdeadc0de
+Secret 3: 0xbadc0de5
+Secret 4: 0xbadbeef5
+
+Stack:
+	Start:0x7ffffffde000
+	End:0x7ffffffff000
+
+Effect of global variables:
+x=10 - 11112 bytes
+x=100 - 11216 bytes
+x=1000 - 12128 bytes
+x=10000 - 21128 bytes
+
+Effect of dynamic variables
+x=10 - 11048 bytes
+x=100 - 11048 bytes
+x=1000 - 11048 bytes
+x=10000 - 11048 bytes
+
+Testing the limits of dynamic memory
+Maximum Dynamic Memory: 0x22a86ef4e000
+Starting Size of Heap: 0
+Ending Size of Heap: 0x22a86ef4e000 
+
+Testing limits of stack memory
+x=10 Starting Size of Heap: 0x21000 
+x=10 Ending Size of Heap: 0x21000
+x=100 Starting Size of Heap: 0x21000
+x=100 Ending Size of Heap: 0x21000
+x=1000 Starting Size of Heap: 0x21000
+x=1000 Ending Size of Heap: 0x21000
+x=10000 Starting Size of Heap: 0x21000
+x=10000 Ending Size of Heap: 0x21000
+

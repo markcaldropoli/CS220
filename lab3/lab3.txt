@@ -1,0 +1,26 @@
+Structures:
+sizeof(gs) == 16 && sizeof(bs) == 24
+&gs == 0x7ffea3b4a7f0 && &bs == 0x7ffea3b4a7d0
+
+Based on this information, the size of good struct was smaller than that of bad struct. This is the case because two shorts each have 4 bytes which can be handled together in memory. When the long is placed in between the two shorts, the 4 bytes of the short and 8 bytes of the long is over the maximum number of bytes (8) that can be handled at one time. This causes the 4 bytes after the short to be padded and the 4 bytes after the second short to also be padded.
+
+Unions:
+O, 34165590585603663, 1919252047, Overlay
+
+printf is interpreting the long within the union as a character, long, integer, and string. The char interpretation prints out a 0 because the data is stored in memory with little-endian. The long interpretation prints out the long that the user provided the program. The integer interpretation prints out the long with information missing. The string interpretation prints out the long using ASCII values to create the string "Overlay".
+
+Arrays and sizeof:
+x = 10
+sizeof(x) == 40
+foo(x) == 8
+
+x = 20
+sizeof(x) == 80
+foo(x) == 8
+
+x = 30
+sizeof(x) == 120
+foo(x) == 8
+
+sizeof(x) within the main differs from the value of foo(x) because sizeof(x) in the main returns the actual size of the array whereas the sizeof(x) used inside of foo is the size of a pointer of 8 bytes that never changes. The pointer size being evaluated inside of foo is a pointer to x and all pointers are the same size.
+
