@@ -1,1 +1,3 @@
-# CS220
+# CS220 - Computer Systems II: Architecture & Programming
+
+The architecture and programming of digital computers. Data representation. Processor, memory and I/O organization. Instruction set architectures, encoding and addressing modes. I/O techniques. Interrupts. Assemblers, macro-processors, compilers, interpreters, linkers, loaders. Assembly and machine language programming. C programming language constructs (control and data structures, pointers, arrays and functions) and their relationship to the underlying architecture. Supervised laboratory work involves programming and debugging using machine language, assembly language and C.
